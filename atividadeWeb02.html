@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html> 
+    <head> 
+	    <fieldset>
+		<legend> <b>MultiCalculadora</b></legend>
+	    <title>MultiCalculadora</title>
+		<link rel="stylesheet" href="custom.css"/>
+		<script src="funcoes.js"></script>
+	</head>
+	<body>
+	<form>
+	<div id="calculadora">
+	    <div class="container">
+				<div class="row">
+				        <input type="radio" id="radioIMC" name="tipo" value="IMC" onclick="mostrarTipo();" checked="checked"/>IMC
+				        <input type="radio" id="radioRet" name="tipo" value="Ret" onclick="mostrarTipo();"/>Retângulo
+				        <input type="radio" id="radioCirc" name="tipo" value="Circ" onclick="mostrarTipo();"/>Círculo
+				</div>
+				<br/>
+				<div id="box">
+			    <div id="divIMC" class="row">
+			    <div class="col-4 form-group">
+				    <label for="pesoIMC">Peso:</label>
+					<input type="number" id="pesoIMC" name="pesoIMC" class="form-control"/>
+				</div>
+				<br/>
+				<div class="col-4 form-group">
+				    <label for="alturaIMC">Altura:</label>
+					<input type="number" id="alturaIMC" name="alturaIMC" class="form-control"/>
+				</div>
+				<div class="col-4 form-group">
+				    <button type="button" class="btn btn-success bottom" onclick="calcularIMC();">Calcular</button>
+				</div>
+				</div>
+				<div id="divRet" class="row" style="display: none;">
+			    <div class="col-4 form-group">
+				    <label for="baseRet">Base:</label>
+					<input type="number" id="baseRet" name="baseRet" class="form-control"/>
+				</div>
+				<br/>
+				<div class="col-4 form-group">
+				    <label for="alturaRet">Altura:</label>
+					<input type="number" id="alturaRet" name="alturaRet" class="form-control"/>
+				</div>
+				<div class="col-4 form-group">
+				    <button type="button" class="btn btn-success bottom" onclick="calcularRet();">Calcular</button>
+				</div>
+				</div>
+				<div id="divCirc" class="row" style="display: none;">
+				<div class="col-4 form-group">
+				    <label for="raioCirc">Raio:</label>
+					<input type="number" id="raioCirc" name="raioCirc" class="form-control"/>
+				</div>
+				<div class="col-4 form-group">
+				    <button type="button" class="btn btn-success bottom" onclick="calcularCirc();">Calcular</button>
+				</div>
+				</div>
+				</div>
+    </form>
+    </div>	
+        </fieldset>	
+	</body>
+</html>
